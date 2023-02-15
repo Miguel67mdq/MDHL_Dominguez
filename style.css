@@ -3,92 +3,104 @@
     margin : 0;
     box-sizing: border-box ;
 }
-
 body{
     font-family: 'Comic Neue', cursive;
-    /*background-color: #BBBBBB;*/
-    background: linear-gradient(grey,white,blue);
+    background: linear-gradient(grey,blue);
 }
 header {
+    height: 600px;
     background: linear-gradient(white,blue,rgb(96, 96, 224));
-}
-h1{
-    font-size: 3.5em;
-    color:black;
-    padding: 20px;
+    display:flex;
+    flex-direction: column;
     
+}
+.box{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.titulo{
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-family: 'Bayon', sans-serif;
+    color:rgb(233, 233, 17);
+}
+.loge{
+    display:flex;
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .caja{
     width: 100%;
+    gap: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 30px;
     margin-bottom: 20px;
-    border:2px solid black
-}
-
-.caja h2{
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    border-top:2px solid black;
-}
-
-
-.imagen_banner{
-    display: inline;
-    margin-left: 200px;
-    width: 60%;
-    height: 40vh;
 }
 nav{
-    display: inline;
-    position: relative;
-    bottom: 300px;
-    left:30px;
-    
+    display: flex;
+    gap: 20px;
 }
-button{
-    width: 120px;
+nav a{
+    width: 200px;
     height: 40px;
-    box-shadow:10px 10px 15px #000000 ;
-    
-}
-.button1{
-    background-color: green;
-}
-.button2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: blue;
-}
-.button3{
-    background-color: blue;
-}
-nav a button{
     text-transform: uppercase;
-    color: #6d1010;
+    color: yellow;
     font-weight: bold;
     font-family:'Comic Neue', cursive ;
     font-size: 20px;
     text-decoration: none;
-    border: 2px solid #000000;
+    border-radius: 5px;
+    border: 2px solid rgb(6, 6, 47);
     
 }
-
-nav a button:hover{
+nav a:hover{
     color: #c78c19;
     text-decoration: under;
 }
 
-.container{
-    display: inline-block;
+img{
+    display: flex;
+    width: 80%;
+    height: 40vh;
+    transition: 400ms;
+    box-shadow: 10px 10px 15px black;
+    object-fit: cover;
 }
-.logo{
-    margin-left: 50px;
-   
+img:hover{
+    opacity: 0.8;
+}
+.titulo_secundario{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    font-family:'Comic Neue', cursive;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
 }
 .fecha{
-    display: inline-block;
-    margin-left: 200px;
-    margin-right: 40px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    margin-left: 700px;
     margin-top: 40px;
     
 }
@@ -108,16 +120,26 @@ nav a button:hover{
 .fecha p:hover{
     font-weight: bold;
 }
-.hockey{
-    margin-left: 30px;
-    transition: 400ms;
-    box-shadow: 10px 10px 15px #000000
+img.hockey{
+    display:flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 50px;
+    /*transition: 400ms;
+    transform:translateX(300px);*/
+    box-shadow: 10px 10px 15px #000000;
+    transition: width 2s, height 4s;
 
 }
 
 .hockey:hover{
     opacity: 0.3;
+    width: 300px;
+    height: 300px;
 }
+
+
 /*css para about*/
 
 .logos{
@@ -125,8 +147,14 @@ nav a button:hover{
     margin-bottom: 150px;
    
 }
+.containers{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+}
 .informacion{
-    display: inline-block;
+    display: flex;
     width: 630px;
     margin-left: 200px;
     margin-right: 40px;
@@ -140,15 +168,20 @@ nav a button:hover{
 }
 .informacion p{
     font-size: 1em;
+    color:#c78c19;
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 30px;
+    gap:10px;
 }
 .informacion p:hover{
     font-weight: bold;
 }
 .hockeys{
-    margin-left: 30px;
+    width: 600px;
+    height: 250px;
+    margin-bottom:50px;
+    margin-left: 700px;
     transition: 400ms;
     box-shadow: 10px 10px 15px #000000
 
@@ -159,18 +192,19 @@ nav a button:hover{
 }
 /*css para contac*/
 .contenedor{
-    display: inline-block;
+    display: flex;
     
 }
 .logo_s{
+
     margin-left: 30px;
     margin-bottom: 150px;
    
 }
+
 .mails{
-    display: inline-block;
-    position: relative;
-    bottom:200px;
+    display: flex;
+    flex-direction: column;
     width: 430px;
     margin-left: 200px;
     margin-right: 40px;
@@ -185,14 +219,13 @@ nav a button:hover{
     margin-bottom: 30px;
     
 }
-.parrafo{
-    display:inline;
-}
 .mails p:hover{
     font-weight: bold;
 }
 .hocke{
-    margin-bottom: 150px;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 50px;
     margin-left: 200px;
     transition: 400ms;
     box-shadow: 10px 10px 15px #000000
@@ -202,6 +235,49 @@ nav a button:hover{
 .hocke:hover{
     opacity: 0.3;
 }
+.reglas{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.items{
+    margin-left: 20px;
+
+}
+/*Css para game*/
+main .tit_secundario{
+    text-align: center;
+}
+.saturday{
+    padding: 20px;
+    text-decoration: underline;
+}
+.fecha_eventos{
+    display:table;
+    align-items: center;
+    background-color: rgb(114, 173, 232);
+    width: 60vw;
+    height: 30vh;
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    margin-top: 20px;
+}
+.facility{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    text-align: center;
+    margin-left:100px;
+    margin-bottom: 80px;
+    font-size: 20px;
+}
+
+
 
 
 

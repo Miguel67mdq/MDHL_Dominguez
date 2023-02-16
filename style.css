@@ -5,7 +5,7 @@
 }
 body{
     font-family: 'Comic Neue', cursive;
-    background: linear-gradient(grey,blue);
+    background: linear-gradient(rgb(45, 96, 247),blue);
 }
 header {
     height: 600px;
@@ -66,6 +66,10 @@ nav a{
 nav a:hover{
     color: #c78c19;
     text-decoration: under;
+}
+
+nav a:focus{
+    color:green;
 }
 
 img{
@@ -141,12 +145,6 @@ img.hockey{
 
 
 /*css para about*/
-
-.logos{
-    margin-left: 50px;
-    margin-bottom: 150px;
-   
-}
 .containers{
     display: flex;
     flex-direction: column;
@@ -163,7 +161,7 @@ img.hockey{
     
 }
 .informacion h3{
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 .informacion p{
@@ -195,13 +193,6 @@ img.hockey{
     display: flex;
     
 }
-.logo_s{
-
-    margin-left: 30px;
-    margin-bottom: 150px;
-   
-}
-
 .mails{
     display: flex;
     flex-direction: column;
@@ -256,17 +247,29 @@ main .tit_secundario{
     display:table;
     align-items: center;
     background-color: rgb(114, 173, 232);
-    width: 60vw;
+    width: 100%;
     height: 30vh;
     border-collapse: collapse;
     border: 1px solid black;
     border-radius: 6px;
     color: rgb(0, 0, 0);
     font-size: 20px;
-    margin-left: 300px;
-    margin-bottom: 100px;
-    margin-top: 20px;
+    
 }
+.fecha_eventos thead{
+    background: #555555;
+    color:white;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+tr,td{
+    text-align: center;
+}
+
 .facility{
     display: flex;
     flex-direction: column;
@@ -276,6 +279,117 @@ main .tit_secundario{
     margin-bottom: 80px;
     font-size: 20px;
 }
+/*Css para registration*/
+/*font-family: 'Roboto', sans-serif;*/
+form{
+    border: 2px solid white;
+    padding: 1rem;
+    background-color: blue;
+    color: black;
+    margin-top: 0em;
+    font-family: 'Roboto', sans-serif;
+}
+main h2{
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+#direccion{
+    width: 450px;
+}
+@media screen  and (max-width:480px) {
+    header{
+        margin-left:5px;
+    }
+    .box{
+        flex-direction: column;
+    }
+    .titulo{
+        font-size: 1em;
+    }
+    .loge{
+        margin-top: 20px;
+        margin-left: 10px;
+        width: 100px;
+        height:100px;
+    }
+    .caja{
+        gap: 1px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav{
+        flex-direction: column;
+        gap: 5px;
+    }
+    nav a{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+    img{
+        
+        width: 80%;
+        height: 20vh;
+        
+    }
+    .fecha{
+        margin-left:50px;
+    }
+    .informacion{
+        flex-direction: column;
+        margin-left: 2px;
+        margin-right: 40px;
+        margin-top: 40px;
+    }
+    .informacion h3{
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+    .informacion p{
+        font-size: 0.8em;
+        
+        font-weight: 200;
+        line-height: 1;
+        margin-bottom: 20px;
+        gap:5px;
+    }
+    .hockeys{
+        margin-left: 50px;
+        width: 300px;
+        height: 150px;
+    }
+    .contenedor{
+        flex-direction: column;
+         
+     }
+    .mails{
+        margin-left: 20px;
+        
+    }
+    .hocke{
+        width: 200px;
+        height: 200px;
+        margin-left: 40px;
+    }
+    .fecha_eventos{
+        width: 50%;
+        height: 30vh;
+        font-size: 10px;
+        
+    }
+    td .mapa{
+        width: 200px;
+        height: 100px;
+    }
+    
+    
+    
+}  
+
+
 
 
 
